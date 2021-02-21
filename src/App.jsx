@@ -12,7 +12,7 @@ const Root = styled.div`
 `;
 const Container = styled(Paper)`
   margin: 0px auto;
-  width: 500px;
+  width: 600px;
   height: 1000px;
 
   overflow: auto;
@@ -65,9 +65,20 @@ const App = () => {
         )}
         <div>
           {loading ? (
-            <VisitBox
-              boardItem={{ title: '...', name: '...', content: '...' }}
-            />
+            <div>
+              <VisitBox
+                boardItem={{ title: '...', name: '...', content: '...' }}
+              />
+              <VisitBox
+                boardItem={{ title: '...', name: '...', content: '...' }}
+              />
+              <VisitBox
+                boardItem={{ title: '...', name: '...', content: '...' }}
+              />
+              <VisitBox
+                boardItem={{ title: '...', name: '...', content: '...' }}
+              />
+            </div>
           ) : (
             data.map((item, idx) => (
               <VisitBox key={idx} boardItem={item} refresh={() => getData()} />
